@@ -32,10 +32,10 @@ class Song
   end
   
   def self.artist_count
-    @@artists.length
-    #hex = {}
-	  #@artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
-	  #hex
+    #@@artists.length
+    hex = {}
+	  @artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
+	  hex
   end
   
   def self.count
