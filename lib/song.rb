@@ -12,38 +12,33 @@ class Song
     @name = songName
     @artist = songArtist
     @genre = songGenre
-    @@artists << songArtist if !@@artists.include?(songArtist)
-    @@genres << songGenre if !@@genres.include?(songGenre)
+    @@artists << songArtist
+    @@genres << songGenre
 	  @@count+=1
   end
-  #binding.pry
+
   def self.genres
-    @@genres
+    @@genres.uniq
   end
   
   def self.artists
-    @@artists
+    @@artists.uniq
   end
 
   def self.genre_count
-    hex = {}
-	  @genre.each { |genre| hex.key?(genre) ? hex[genre] += 1 : hex[genre] = 1 }
-	  hex
+    counts = Hash.new(0)
+	  @@genres.each { |genre| counts[genre] += 1}
+	  counts
   end
   
   def self.artist_count
-    @@artists.length
-    #hex = {}
-	  #@artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
-	  #hex
+    counts = Hash.new(0)
+	  @@artists.each { |artist| counts[artist] +=1 }
+	  counts
   end
   
   def self.count
     return @@count
-  end
-  
-  def self.genre_count
-    binding.pry
   end
   
 end
