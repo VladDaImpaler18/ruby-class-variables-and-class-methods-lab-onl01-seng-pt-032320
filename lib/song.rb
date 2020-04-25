@@ -27,15 +27,14 @@ class Song
 
   def self.genre_count
     counts = Hash.new(0)
-	  @@genre.each { |genre| hex[genre] += 1}
-	  hex
+	  @@genre.each { |genre| counts[genre] += 1}
+	  counts
   end
   
   def self.artist_count
-    hex = {}
-    binding.pry
-	  @@artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
-	  hex
+    counts = Hash.new(0)
+	  @@artists.each { |artist| counts[artist] +=1 }
+	  counts
   end
   
   def self.count
