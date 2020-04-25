@@ -26,11 +26,16 @@ class Song
   end
 
   def self.genre_count
-    binding.pry
+    hex = {}
+	  genre.each { |genre| hex[genre] += 1}
+	  hex
   end
   
   def self.artist_count
-    
+    hex = {}
+    binding.pry
+	  @@artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
+	  hex
   end
   
   def self.count
