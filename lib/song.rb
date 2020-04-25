@@ -15,6 +15,7 @@ class Song
     @@artists << songArtist if !@@artists.include?(songArtist)
     @@genres << songGenre if !@@genres.include?(songGenre)
 	  @@count+=1
+	  binding.pry
   end
 
   def self.genres
