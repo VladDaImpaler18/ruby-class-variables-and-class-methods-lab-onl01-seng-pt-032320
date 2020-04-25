@@ -13,17 +13,17 @@ class Song
     @artist = songArtist
     @genre = songGenre
     @@artists << songArtist
-    @@genres << songGenre if !@@genres.include?(songGenre)
+    @@genres << songGenre
 	  @@count+=1
 	  binding.pry
   end
 
   def self.genres
-    @@genres
+    @@genres.uniq
   end
   
   def self.artists
-    @@artists.
+    @@artists.uniq
   end
 
   def self.genre_count
