@@ -27,14 +27,14 @@ class Song
 
   def self.genre_count
     hex = {}
-	  @genre.each { |genre| hex.key?(genre) ? hex[genre] += 1 : hex[genre] = 1 }
+	  @@genre.each { |genre| hex.key?(genre) ? hex[genre] += 1 : hex[genre] = 1 }
 	  hex
   end
   
   def self.artist_count
     hex = {}
     binding.pry
-	  @artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
+	  @@artists.each { |artist| hex.key?(artist) ? hex[artist] +=1 : hex[artist] = 1 }
 	  hex
   end
   
