@@ -16,7 +16,7 @@ class Song
     @@genres << songGenre if !@@genres.include?(songGenre)
 	  @@count+=1
   end
-  #binding.pry
+
   def self.genres
     @@genres
   end
@@ -43,7 +43,7 @@ class Song
   end
   
   def self.genre_count
-    binding.pry
+    
   end
   
 end
