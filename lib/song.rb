@@ -12,7 +12,7 @@ class Song
     @name = songName
     @artist = songArtist
     @genre = songGenre
-    @@artists << songArtist if !@@artists.include?(songArtist)
+    @@artists << songArtist
     @@genres << songGenre if !@@genres.include?(songGenre)
 	  @@count+=1
 	  binding.pry
@@ -23,7 +23,7 @@ class Song
   end
   
   def self.artists
-    @@artists
+    @@artists.collect{if !@@artists.include?(songArtist)
   end
 
   def self.genre_count
