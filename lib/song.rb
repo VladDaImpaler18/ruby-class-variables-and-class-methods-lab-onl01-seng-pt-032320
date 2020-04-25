@@ -27,7 +27,7 @@ class Song
 
   def self.genre_count
     hex = {}
-	  genre.each { |genre| hex[genre] += 1}
+	  @@genre.each { |genre| hex[genre] += 1}
 	  hex
   end
   
